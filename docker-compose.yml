@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  hello_web:
+    build: .
+    container_name: hello_web
+    ports:
+      - "8090:80"
+    volumes:
+      - ./src:/var/www/html
+    restart: always
